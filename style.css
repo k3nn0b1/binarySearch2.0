@@ -12,14 +12,15 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
   color: #373737;
+  height: 80vh;
 }
 
 #mainSession{
   display: flex;
   flex-direction: column;
   width: 340px;
-  
 }
 
 
@@ -30,12 +31,14 @@ body{
 
 #subtitle{
   text-align:start;
+  font-size: 15px;
+  
 }
 
 #cut{
   height: 2px;
-  width: 346px;
-  background-color: #373737;
+  width: 340px;
+  background-color: #757575;
   border-radius: 20px;
 }
 
@@ -50,10 +53,50 @@ body{
   border-radius: 12px;
   border-style: none;
   cursor: pointer;
-
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  transition: 150ms;
 }
 
 .buttons:hover{
   width: 73px;
   height: 73px;
+  transition: 150ms;
+}
+
+#start{
+  margin-top: 50px;
+  width: 320px;
+  height: 60px;
+  border-style: none;
+  border-radius: 12px;
+  background-color: #373737;
+  font-size: 24px;
+  color: #ebebeb;
+  cursor: pointer;
+}
+
+#start:hover{
+  background-color: #ebebeb;
+  color: #373737;
+  width: 330px;
+  height: 60px;
+  transition: 150ms;
+}
+
+.containerButton{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 13px;
+  gap: 8px;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 10vh;
+  font-size: 12px;
 }
