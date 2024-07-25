@@ -3,27 +3,32 @@ let lowerValue = 0;
 let highestValue = array.length - 1;
 let mid = Math.floor((highestValue + lowerValue) / 2);
 
+//vai transformar os botoes em variaveis (boolean)
 const lessButton = document.getElementById("menor");
 const moreButton = document.getElementById("maior");
 const equalButton = document.getElementById("Igual");
 
+//vai atualizar o num do meio
 function updateMid() {
   mid = Math.floor((highestValue + lowerValue) / 2);
   checkArrayLength();
 }
 
+//vai atrivuir a função de corte no botao mais
 function moreThan() {
   lowerValue = mid + 1;
   updateMid();
   console.log(array.slice(lowerValue, highestValue + 1));
 }
 
+//vai atrivuir a função de corte no botao menos
 function lessThan() {
   highestValue = mid;
   updateMid();
   console.log(array.slice(lowerValue, highestValue + 1));
 }
 
+//vai validar se o tamanho do array é 1, se for 1 ele para
 function checkArrayLength() {
   const currentArray = array.slice(lowerValue, highestValue + 1);
   if (currentArray.length <= 1) {
@@ -33,18 +38,22 @@ function checkArrayLength() {
   }
 }
 
+//desabilitar clique nos botoes
 function disableButtons() {
   lessButton.disabled = true;
   moreButton.disabled = true;
   equalButton.disabled = true;
 }
 
+//habilitar clique nos botoes
 function enableButtons() {
   lessButton.disabled = false;
   moreButton.disabled = false;
   equalButton.disabled = false;
 }
 
+
+//eventos de clique nos botoes e chamadas de funcao
 document.getElementById("maior").addEventListener("click", () => {
   moreThan();
 });
@@ -57,5 +66,5 @@ document.getElementById("Igual").addEventListener("click", () => {
   disableButtons();
 });
 
-// Inicialmente, verifique a condição
+//chamar função de validação de tamanho do array
 checkArrayLength();
