@@ -4,9 +4,9 @@ let highestValue = array.length - 1;
 let mid = Math.floor((highestValue + lowerValue) / 2);
 
 //vai transformar os botoes em variaveis (boolean)
-const lessButton = document.getElementById("menor");
-const moreButton = document.getElementById("maior");
-const equalButton = document.getElementById("Igual");
+const lessButton = document.getElementById("less");
+const moreButton = document.getElementById("more");
+const equalButton = document.getElementById("equal");
 
 //vai atualizar o num do meio
 function updateMid() {
@@ -54,17 +54,20 @@ function enableButtons() {
 
 
 //eventos de clique nos botoes e chamadas de funcao
-document.getElementById("maior").addEventListener("click", () => {
+document.getElementById("more").addEventListener("click", () => {
   moreThan();
 });
 
-document.getElementById("menor").addEventListener("click", () => {
+document.getElementById("less").addEventListener("click", () => {
   lessThan();
 });
 
-document.getElementById("Igual").addEventListener("click", () => {
+document.getElementById("equal").addEventListener("click", () => {
   disableButtons();
 });
 
 //chamar função de validação de tamanho do array
 checkArrayLength();
+
+
+//igual recebe midValue

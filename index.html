@@ -1,16 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Algoritmo de Busca Binária</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./src/assets/images/favIcon.svg"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="mainSession">
+      <div id="mainTitle">
+        <img
+          id="searchIcon"
+          src="/src/assets/images/searchIcon.svg"
+          alt="searchIcon"
+        />
+        <h1>Algoritmo de Busca Binária</h1>
+      </div>
+      <p id="subtitle">
+        Pense em um número aleatório de 0 a 10 e o computador irá “adivinhar” no
+        menor número possível de tentativas qual o número escolhido, seguindo o
+        algoritmo de busca binária.
+      </p>
+    </div>
 
-    <button id="menor">Menor</button>
-    <button id="Igual">Igual</button>
-    <button id="maior">Maior</button>
+    <div id="cut"></div>
 
+    <h2 id="call">Vamos lá!</h2>
+
+    <div id="operators">
+      <button class="buttons" id="more">
+        <img src="./src/assets/images/arrowUp.svg" alt="Maior" />
+      </button>
+      <button class="buttons" id="equal">Igual</button>
+      <button class="buttons" id="less">
+        <img src="./src/assets/images/arrowDown.svg" alt="Menor" />
+      </button>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
