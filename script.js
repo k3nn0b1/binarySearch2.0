@@ -14,7 +14,7 @@ function updateMid() {
   checkArrayLength();
 }
 
-//vai atrivuir a função de corte no botao mais
+//vai atribuir a função de corte no botao mais
 function moreThan() {
   lowerValue = mid + 1;
   updateMid();
@@ -52,19 +52,34 @@ function enableButtons() {
   equalButton.disabled = false;
 }
 
+function showResult(){
+  const result = document.getElementById("call")
+  const chamada = document.getElementById("isIt")
+  chamada.innerHTML= "O número é "
+  result.innerHTML= mid + " ?";
+}
+
+
 
 //eventos de clique nos botoes e chamadas de funcao
 document.getElementById("more").addEventListener("click", () => {
   moreThan();
+  showResult()
 });
 
 document.getElementById("less").addEventListener("click", () => {
   lessThan();
+  showResult()
 });
 
 document.getElementById("equal").addEventListener("click", () => {
   disableButtons();
 });
+
+document.getElementById("start").addEventListener("click", () =>{
+
+  showResult()
+})
 
 //chamar função de validação de tamanho do array
 checkArrayLength();

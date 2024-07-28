@@ -12,9 +12,8 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
   color: #373737;
-  height: 80vh;
+  height: 100vh;
 }
 
 #mainSession{
@@ -23,6 +22,10 @@ body{
   width: 340px;
 }
 
+#isIt{
+  margin: 0;
+  font-size: 18px;
+}
 
 #mainTitle{
   display: flex;
@@ -35,12 +38,6 @@ body{
   
 }
 
-#cut{
-  height: 2px;
-  width: 340px;
-  background-color: #757575;
-  border-radius: 20px;
-}
 
 #operators{
   display: flex;
@@ -48,6 +45,7 @@ body{
 }
 
 .buttons{
+  margin-top: 20px;
   width: 70px;
   height: 70px;
   border-radius: 12px;
@@ -58,14 +56,16 @@ body{
 }
 
 .buttons:hover{
+  background-color: #9e9e9e;
   width: 73px;
   height: 73px;
   transition: 150ms;
 }
 
+
+
 #start{
-  margin-top: 50px;
-  width: 320px;
+  width: 236px;
   height: 60px;
   border-style: none;
   border-radius: 12px;
@@ -73,12 +73,13 @@ body{
   font-size: 24px;
   color: #ebebeb;
   cursor: pointer;
+  margin-top: 30px;
 }
 
 #start:hover{
   background-color: #ebebeb;
   color: #373737;
-  width: 330px;
+  width: 240px;
   height: 60px;
   transition: 150ms;
 }
@@ -99,4 +100,8 @@ footer{
   justify-content: end;
   height: 10vh;
   font-size: 12px;
+}
+
+#call{
+  margin: 0px;
 }
